@@ -1,0 +1,19 @@
+{%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+<div class="post-header">
+  {%- if post.image-header and post.image-alt -%}
+    <img src="{{ post.image-header }}" alt="{{ post.image-alt }}" class="post-image-header">
+  {%- endif -%}
+  <h2><a class="post-link" href="{{ post.url | relative_url }}">
+    {{ post.title | escape }}
+  </a></h2>
+  {%- if post.author -%}
+    <p class="post-author-line">Written by: <span class="post-author">{{ post.author }}</span></p>
+  {%- endif -%}
+  <p class="post-meta">{{ post.date | date: date_format }}</p>
+</div>
+{%- if site.show_excerpts -%}
+  <div class="post-contents">
+    {{ post.excerpt }}
+  </div>
+  <p><a class="post-jump" href="{{ post.url | relative_url }}">Continue reading...</a></p>
+{%- endif -%}

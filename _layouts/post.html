@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="post">
+  {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+  <header class="post-header">
+    {%- if page.image-header and page.image-alt -%}
+      <img src="{{ page.image-header }}" alt="{{ page.image-alt }}" class="post-image-header">
+    {%- endif -%}
+    <h1>{{ page.title | escape }}</h1>
+    {%- if page.author -%}
+    <p class="post-author-line">Written by: <span class="post-author">{{ page.author }}</span></p>
+    {%- endif -%}
+
+    <p class="post-meta">
+      <time class="post-time" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time>
+    </p>
+    <hr>
+    {%- if page.tags -%}
+    <div class="post-tags">
+      <span class="post-tags-label">Tags:</span>
+      {%- for tag in page.tags -%}
+        <span class=post-tag>{{ tag }}</span>
+      {%- endfor -%}
+    </div>
+    <hr>
+    {%- endif -%}
+  </header>
+  <div class="post-contents">
+    {{ page.content }}
+  </div>
+</article>

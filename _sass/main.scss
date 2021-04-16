@@ -1,0 +1,295 @@
+@import '_globals';
+@import '_reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css');
+
+body {
+  background-color: $bgcolor;
+  color: $fgcolor;
+  font-family: 'Libre Franklin', sans-serif;
+  display: grid;
+  justify-content: center;
+  column-gap: 20px;
+  grid-template-columns: repeat(12, 60px);
+  grid-template-rows: min-content 1fr;
+}
+
+.site-header {
+  grid-row: 1;
+  grid-column: 1 / 13;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  //background-color: red;
+  h1 {
+    font-weight: 900;
+    font-size: xxx-large;
+  }
+}
+
+nav {
+  grid-row: 2;
+  grid-column: 1 / 5;
+  display: flex;
+  flex-direction: column;
+  //background-color: blue;
+  img {
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      /*&:before {
+        content: "\200B"; // safari hack (https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns)
+      }*/
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  #pages {
+    font-size: x-large;
+    margin-bottom: 2em;
+
+    ul {
+      li {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+
+/*
+        display: flex;
+        &:before, &:after {
+          content: "";
+          flex: 1 1;
+          border-bottom: 1px solid;
+          margin: auto;
+        }
+        &:before {
+          margin-right: 0.5em;
+        }
+        &:after {
+          margin-left: 0.5em;
+        }
+        */
+      }
+    }
+  }
+
+  .panel {
+    margin-bottom: 1em;
+  }
+  .post-link {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .date {
+      font-weight: 100;
+      font-style: italic;
+      font-size: small;
+      white-space: nowrap;
+      margin-left: 1em;
+    }
+  }
+}
+
+main {
+  grid-row: 2;
+  grid-column: 5 / 13;
+  //background-color: yellow;
+  h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  h5 {
+    display: inline-block;
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-meta {
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  .post-header {
+    margin-bottom: 1rem;
+    a {
+      text-decoration: none;
+    }
+    display: flex;
+    flex-direction: column;
+
+    hr {
+      width: 100%;
+    }
+  }
+
+  .post-summary {
+    margin-bottom: 2rem;
+  }
+
+  .post-contents {
+    line-height: 1.5rem;
+    p {
+      text-indent: 2em;
+      margin-bottom: 1em;
+    }
+    em {
+      font-style: italic;
+    }
+    strong {
+      font-weight: bold;
+    }
+    ul {
+      list-style-type: "\25c6";
+      list-style-position: outside;
+      margin-left: 1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      li {
+        padding-left: 1em;
+      }
+    }
+
+    ol {
+      list-style-type: decimal;
+      list-style-position: outside;
+      margin-left: 1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+      ol {
+        list-style-type: lower-alpha;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      li {
+        padding-left: 0.5em;
+      }
+    }
+    pre {
+      font-family: 'Fira Code', monospace;
+      font-size: small;
+      line-height: 1.1em;
+      tab-size: 2;
+      -moz-tab-size:2;
+      -o-tab-size:2;
+    }
+
+    code {
+      font-family: 'Fira Code', monospace;
+      color: $codecolor;
+      font-size: 90%;
+    }
+
+    div.highlight, div.highlight .w {
+      border-style: dashed;
+      border-color: #ffffff;
+      border-width: 1px;
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  .post-image-header {
+    margin-bottom: 1rem;
+    flex: 0 1
+  }
+
+  .post-jump {
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  .post-author-line {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    .post-author {
+      font-style: italic;
+    }
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: first baseline;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    .post-tags-label {
+      font-weight: bold;
+      margin-right: 0.5em;
+    }
+
+    .post-tag {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 0.25em;
+      padding-right: 0.25em;
+      border-style: dashed;
+      border-width: 1px;
+    }
+  }
+}
+
+.blurb {
+  font-style: italic;
+  font-weight: 100;
+  //font-size: small;
+  margin-bottom: 1em;
+}
+
+a {
+  color: $linkcolor;
+  &:hover {
+    color: $hovercolor;
+  }
+}

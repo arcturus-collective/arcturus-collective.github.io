@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {%- if page.title -%}
+      <title>{{ site.title }}: {{ page.title }}</title>
+    {%- else -%}
+      <title>{{ site.title }}</title>
+    {%- endif -%}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>{{ site.title }}</h1>
+      <hr>
+    </header>
+    <nav>
+      <div id="branding" class="panel">
+        <a href="{% link index.markdown %}"><img src="/assets/images/logo.png" id="logo"/></a>
+        <p class="blurb">{{ site.description  }}</p>
+      </div>
+      <div id="pages" class="panel">
+        <ul>
+          <li><a href="{% link index.markdown %}">Home</a></li>
+          <li><a href="{% link about.md %}">About</a></li>
+          <li>People</li>
+          <li>Projects</li>
+          <li><a href="{% link archive.md %}">Archive</a></li>
+        </ul>
+      </div>
+      <div id="posts" class="panel">
+        <h2>Recent Posts</h2>
+        <hr>
+        <ul>
+          {% for post in site.posts limit:site.postlimit %}
+            <li><a href="{{ post.url }}" class="post-link"><span class="title">{{ post.title }}</span><span class="date">{{ post.date | date: "%-d %B %Y" }}</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div id="categories" class="panel">
+        <h2>Categories</h2>
+        <hr>
+        <ul>
+          {% for cat in site.categories %}
+            <li>{{ cat | first | strip_html | capitalize }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div id="social" class="panel">
+        <h2>Contact</h2>
+        <hr>
+        <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}"><span class="material-icons">rss_feed</span> RSS</a></p>
+      </div>
+    </nav>
+
+    <main>
+      {{ content }}
+    </main>
+  </body>
+</html>
