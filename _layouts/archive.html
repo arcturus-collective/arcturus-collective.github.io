@@ -10,14 +10,21 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li class="post-summary">
-        {% include post_summary.html %}
-      </li>
-      {%- endfor -%}
-    </ul>
+    {% assign posts_by_date = site.posts | group_by_exp:"post", "post.date | date: '%Y %m'"  %}
+    <div class="posts-by-month">
+    {% for date in posts_by_date %}
+      {% assign date_str = date.items.first.date | date: "%b %Y" %}
+      <h2 class="post-list-heading">{{ date_str }}</h2>
+      <hr>
+      <ul class="post-list">
+        {%- for post in date.items -%}
+        <li class="post-summary">
+          {% include post_summary.html %}
+        </li>
+        {%- endfor -%}
+      </ul>
+    {% endfor %}
+    </div>
   {%- endif -%}
 
 </div>
