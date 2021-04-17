@@ -16,6 +16,13 @@ body {
   grid-template-rows: min-content 1fr;
 }
 
+.site-header-contents {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .site-header {
   grid-row: 1;
   grid-column: 1 / 13;
@@ -25,6 +32,59 @@ body {
   h1 {
     font-weight: 900;
     font-size: xxx-large;
+  }
+}
+
+#search-container {
+  overflow-x: visible;
+}
+
+.search-icon {
+  color: $decorationcolor;
+  position: absolute;
+  font-size: 1em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+
+#search-input {
+  padding-left: 2em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+  background-color: $inputcolor;
+  color: $fgcolor;
+  border: 1px solid $decorationcolor;
+  border-radius: 2px;
+  outline: 0;
+}
+
+#search-results {
+  display: none;
+  position: absolute;
+  background-color: $inputcolor;
+  padding: 0.5em;
+  flex-direction: column;
+  border-style: none dashed dashed dashed;
+  border-color: $fgcolor;
+  border-width: 1px;
+  li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    a {
+      text-decoration: none;
+      &:hover {
+        .highlight {
+          color: $highlighthovercolor;
+        }
+      }
+    }
+  }
+  .highlight {
+    color: $highlightcolor;
+    background-color: inherit;
+    font-weight: bold;
   }
 }
 
