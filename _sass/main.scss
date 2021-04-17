@@ -5,6 +5,13 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css');
 
+a {
+  color: $linkcolor;
+  &:hover {
+    color: $hovercolor;
+  }
+}
+
 body {
   background-color: $bgcolor;
   color: $fgcolor;
@@ -16,6 +23,13 @@ body {
   grid-template-rows: min-content 1fr;
 }
 
+.site-header-contents {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .site-header {
   grid-row: 1;
   grid-column: 1 / 13;
@@ -25,6 +39,63 @@ body {
   h1 {
     font-weight: 900;
     font-size: xxx-large;
+    a {
+      color: $fgcolor;
+      text-decoration: none;
+    }
+  }
+}
+
+#search-container {
+  overflow-x: visible;
+}
+
+.search-icon {
+  color: $decorationcolor;
+  position: absolute;
+  font-size: 1em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+
+#search-input {
+  padding-left: 2em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+  background-color: $inputcolor;
+  color: $fgcolor;
+  border: 1px solid $decorationcolor;
+  border-radius: 2px;
+  outline: 0;
+}
+
+#search-results {
+  display: none;
+  position: absolute;
+  background-color: $inputcolor;
+  padding: 0.5em;
+  flex-direction: column;
+  border-style: none dashed dashed dashed;
+  border-color: $fgcolor;
+  border-width: 1px;
+  li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    a {
+      text-decoration: none;
+      &:hover {
+        .highlight {
+          color: $highlighthovercolor;
+        }
+      }
+    }
+  }
+  .highlight {
+    color: $highlightcolor;
+    background-color: inherit;
+    font-weight: bold;
   }
 }
 
@@ -50,11 +121,12 @@ nav {
     li {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-      /*&:before {
-        content: "\200B"; // safari hack (https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns)
-      }*/
       a {
+        color: $fgcolor;
         text-decoration: none;
+        &:hover {
+          color: $linkcolor;
+        }
       }
     }
   }
@@ -67,22 +139,13 @@ nav {
       li {
         margin-top: 0.2em;
         margin-bottom: 0.2em;
-
-/*
-        display: flex;
-        &:before, &:after {
-          content: "";
-          flex: 1 1;
-          border-bottom: 1px solid;
-          margin: auto;
+        a {
+          color: $fgcolor;
+          text-decoration: none;
+          &:hover {
+            color: $linkcolor;
+          }
         }
-        &:before {
-          margin-right: 0.5em;
-        }
-        &:after {
-          margin-left: 0.5em;
-        }
-        */
       }
     }
   }
@@ -116,12 +179,26 @@ main {
     font-size: xx-large;
     font-weight: bold;
     margin-bottom: 1rem;
+    a {
+      color: $fgcolor;
+      text-decoration: none;
+      &:hover {
+        color: $linkcolor;
+      }
+    }
   }
 
   h2 {
     font-size: x-large;
     font-weight: bold;
     margin-bottom: 1rem;
+    a {
+      color: $fgcolor;
+      text-decoration: none;
+      &:hover {
+        color: $linkcolor;
+      }
+    }
   }
 
   h3 {
@@ -294,11 +371,4 @@ main {
   font-weight: 100;
   //font-size: small;
   margin-bottom: 1em;
-}
-
-a {
-  color: $linkcolor;
-  &:hover {
-    color: $hovercolor;
-  }
 }
