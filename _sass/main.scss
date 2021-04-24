@@ -1,7 +1,7 @@
 @import '_globals';
 @import '_reset';
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Lato&family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css');
 
@@ -12,10 +12,18 @@ a {
   }
 }
 
+h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+  font-family: 'Iceland', cursive;
+}
+
 body {
   background-color: $bgcolor;
   color: $fgcolor;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Lato', sans-serif;
   display: grid;
   justify-content: center;
   column-gap: 20px;
@@ -111,7 +119,7 @@ nav {
 
   h2 {
     font-weight: bold;
-    font-size: large;
+    font-size: xx-large;
   }
 
   ul {
