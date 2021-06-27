@@ -268,7 +268,7 @@ main {
   }
 
   .post-meta {
-    font-style: italic;
+    color: $fg2color;
     font-weight: 100;
   }
 
@@ -286,7 +286,7 @@ main {
   }
 
   .post-summary {
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
 
   .post-contents {
@@ -364,15 +364,6 @@ main {
   .post-jump {
     font-weight: 100;
     font-style: italic;
-  }
-
-  .post-author-line {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-
-    .post-author {
-      font-style: italic;
-    }
   }
 
   .post-tags {

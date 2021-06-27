@@ -1,4 +1,4 @@
-{%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+{%- assign date_format = site.date_format | default: "%F" -%}
 <div class="post-header">
   {%- if post.image-header and post.image-alt -%}
     <img src="{{ post.image-header }}" alt="{{ post.image-alt }}" class="post-image-header">
@@ -7,9 +7,10 @@
     {{ post.title | escape }}
   </a></h2>
   {%- if post.author -%}
-    <p class="post-author-line">Written by: <span class="post-author">{{ post.author }}</span></p>
+    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: date_format }}</p>
+  {%- else -%}
+    <p class="post-meta">Posted on {{ post.date | date: date_format }}</p>
   {%- endif -%}
-  <p class="post-meta">{{ post.date | date: date_format }}</p>
 </div>
 {%- if site.show_excerpts -%}
   <div class="post-contents">
