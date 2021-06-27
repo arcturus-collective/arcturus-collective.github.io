@@ -267,6 +267,10 @@ main {
     flex-direction: column;
   }
 
+  .post-list-heading {
+    margin: 0;
+  }
+
   .post-meta {
     color: $fg2color;
     font-weight: 100;
@@ -287,6 +291,14 @@ main {
 
   .post-summary {
     margin-bottom: 6rem;
+  }
+
+  .post-stub {
+    margin-bottom: 1em;
+
+    h2 {
+      margin: 0;
+    }
   }
 
   .post-contents {
