@@ -208,7 +208,7 @@ nav {
 main {
   grid-row: 2;
   grid-column: 5 / 13;
-  //background-color: yellow;
+  margin-bottom: 4rem;
   h1 {
     font-size: xx-large;
     font-weight: bold;
@@ -292,7 +292,6 @@ main {
   .post-contents {
     line-height: 1.5rem;
     p {
-      text-indent: 2em;
       margin-bottom: 1em;
     }
     em {
@@ -304,7 +303,7 @@ main {
     ul {
       list-style-type: "\25c6";
       list-style-position: outside;
-      margin-left: 1em;
+      margin-left: 2em;
       margin-top: 1em;
       margin-bottom: 1em;
       li {
@@ -315,7 +314,7 @@ main {
     ol {
       list-style-type: decimal;
       list-style-position: outside;
-      margin-left: 1em;
+      margin-left: 2em;
       margin-top: 1em;
       margin-bottom: 1em;
 
@@ -372,6 +371,7 @@ main {
     align-items: first baseline;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: $fg2color;
 
     .post-tags-label {
       font-weight: bold;
@@ -385,8 +385,9 @@ main {
       padding-bottom: 2px;
       padding-left: 0.25em;
       padding-right: 0.25em;
-      border-style: dashed;
+      border-style: solid;
       border-width: 1px;
+      border-radius: 6px;
     }
   }
 }
