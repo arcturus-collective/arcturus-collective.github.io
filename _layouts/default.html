@@ -49,7 +49,7 @@
         <hr>
         <ul>
           {% for post in site.posts limit:site.postlimit %}
-            <li><a href="{{ post.url }}" class="post-link"><span class="title">{{ post.title }}</span><span class="date">{{ post.date | date: "%-d %B %Y" }}</span></a></li>
+            <li><a href="{{ post.url }}" class="post-link"><span class="title">{{ post.title }}</span><span class="date">{{ post.date | date: "%F" }}</span></a></li>
           {% endfor %}
         </ul>
       </div>
