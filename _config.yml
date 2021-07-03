@@ -39,7 +39,6 @@ collections:
     permalink: /archive/:year/:month/:day/:slug:output_ext
 
 postlimit: 10
-show_excerpts: true
 
 kramdown:
   input: GFM

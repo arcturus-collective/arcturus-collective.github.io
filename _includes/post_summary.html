@@ -12,9 +12,7 @@
     <p class="post-meta">Posted on {{ post.date | date: date_format }}</p>
   {%- endif -%}
 </div>
-{%- if site.show_excerpts -%}
-  <div class="post-contents">
-    {{ post.excerpt }}
-  </div>
-  <p><a class="post-jump" href="{{ post.url | relative_url }}">Continue reading...</a></p>
-{%- endif -%}
+<div class="post-contents">
+  {{ post.excerpt }}
+</div>
+<p><a class="post-jump" href="{{ post.url | relative_url }}">Continue reading...</a></p>
