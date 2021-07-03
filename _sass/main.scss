@@ -125,54 +125,39 @@ nav {
     font-size: xx-large;
   }
 
-  #categories {
-    ul {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      li {
-        flex-grow: 1;
-        margin: 0.5em;
-        a {
-          color: $fgcolor;
-          text-decoration: none;
-          &:hover {
-            color: $linkcolor;
-          }
-        }
-      }
-    }
-  }
-
   #pages {
     ul {
-      list-style: none;
-      display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       li {
-        margin: 0.5em;
         flex-grow: 1;
-        a {
-          color: $fgcolor;
-          text-decoration: none;
-          &:hover {
-            color: $linkcolor;
-          }
-        }
       }
     }
   }
 
   #posts {
     ul {
-      list-style: none;
-      display: flex;
       flex-direction: column;
+    }
+  }
+
+  #archive {
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
       li {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .panel {
+    margin-bottom: 1em;
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin: 0.5em;
         a {
           color: $fgcolor;
           text-decoration: none;
@@ -182,10 +167,6 @@ nav {
         }
       }
     }
-  }
-
-  .panel {
-    margin-bottom: 1em;
   }
   .post-link {
     display: flex;
