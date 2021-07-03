@@ -43,6 +43,7 @@ collections:
     permalink: /archive/:year/:month/:day/:slug:output_ext
 
 postlimit: 10
+timezone: UTC
 
 kramdown:
   input: GFM
