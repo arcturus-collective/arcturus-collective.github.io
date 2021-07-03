@@ -7,6 +7,8 @@ author: exodrifter
 tags: [Unity3D, code, C#]
 image-header: "/assets/images/posts/chainsaw-bear-825x510.png"
 image-alt: "A bear wielding flaming chainsaws/"
+redirect_from:
+  - /archives/22
 ---
 
 Something you might not realize is that it is actually possible to compile and run C# code at *runtime* (not just in the editor!) with Unity3D. This may seem like the equivalent of equipping bears with flaming chainsaws, but it has several practical advantages.
