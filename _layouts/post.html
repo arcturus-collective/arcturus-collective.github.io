@@ -14,13 +14,21 @@ layout: default
     {%- elsif page.date -%}
       <p class="post-meta">Posted at {{ page.date | date: date_format }}</p>
     {%- endif -%}
-    {%- if page.tags -%}
-    <div class="post-tags">
-      <span class="post-tags-label">Tags:</span>
-      {%- for tag in page.tags -%}
-        <span class=post-tag>{{ tag }}</span>
-      {%- endfor -%}
-    </div>
+    {%- if page.categories.size > 0 -%}
+      <div class="post-tags">
+        <span class="post-tags-label">Categories:</span>
+        {%- for category in page.categories -%}
+          <span class=post-tag>{{ category }}</span>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+    {%- if page.tags.size > 0 -%}
+      <div class="post-tags">
+        <span class="post-tags-label">Tags:</span>
+        {%- for tag in page.tags -%}
+          <span class=post-tag>{{ tag }}</span>
+        {%- endfor -%}
+      </div>
     {%- endif -%}
     <hr>
   </header>
