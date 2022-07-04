@@ -234,6 +234,44 @@ main {
     font-weight: bold;
   }
 
+  p {
+    line-height: 1.5rem;
+    margin-bottom: 1em;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: "\25c6";
+    list-style-position: outside;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    li {
+      padding-left: 1em;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    ol {
+      list-style-type: lower-alpha;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    li {
+      padding-left: 0.5em;
+    }
+  }
+
   .posts-by-month {
     margin-bottom: 2rem;
     display: flex;
@@ -246,6 +284,7 @@ main {
   .post-list {
     display: flex;
     flex-direction: column;
+    list-style-type: "";
   }
 
   .post-list-heading {
@@ -285,41 +324,8 @@ main {
 
   .post-contents {
     line-height: 1.5rem;
-    p {
-      margin-bottom: 1em;
-    }
     em {
       font-style: italic;
-    }
-    strong {
-      font-weight: bold;
-    }
-    ul {
-      list-style-type: "\25c6";
-      list-style-position: outside;
-      margin-left: 2em;
-      margin-top: 1em;
-      margin-bottom: 1em;
-      li {
-        padding-left: 1em;
-      }
-    }
-
-    ol {
-      list-style-type: decimal;
-      list-style-position: outside;
-      margin-left: 2em;
-      margin-top: 1em;
-      margin-bottom: 1em;
-
-      ol {
-        list-style-type: lower-alpha;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      li {
-        padding-left: 0.5em;
-      }
     }
     pre {
       font-family: 'Fira Code', monospace;
