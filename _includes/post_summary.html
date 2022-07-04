@@ -1,7 +1,9 @@
 {%- assign date_format = site.date_format | default: "%F" -%}
 <div class="post-header">
   {%- if post.image-header and post.image-alt -%}
-    <img src="{{ post.image-header }}" alt="{{ post.image-alt }}" class="post-image-header">
+    <div class="image-container ratio-16-9" style="margin-bottom: 1em">
+      <img src="{{ post.image-header }}" alt="{{ post.image-alt }}" class="post-image-header">
+    </div>
   {%- endif -%}
   <h2><a class="post-link" href="{{ post.url | relative_url }}">
     {{ post.title | escape }}

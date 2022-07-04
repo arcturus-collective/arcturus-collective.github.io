@@ -6,7 +6,9 @@ layout: default
   {%- assign date_format = site.date_format | default: "%FT%TZ" -%}
   <header class="post-header">
     {%- if page.image-header and page.image-alt -%}
-      <img src="{{ page.image-header }}" alt="{{ page.image-alt }}" class="post-image-header">
+      <div class="image-container ratio-16-9" style="margin-bottom: 1em">
+        <img src="{{ page.image-header }}" alt="{{ page.image-alt }}" class="post-image-header">
+      </div>
     {%- endif -%}
     <h1>{{ page.title | escape }}</h1>
     {%- if page.author -%}

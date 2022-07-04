@@ -43,7 +43,6 @@ body {
   grid-column: 1 / 13;
   margin-top: 2em;
   margin-bottom: 3em;
-  //background-color: red;
   h1 {
     font-weight: 900;
     font-size: xxx-large;
@@ -56,6 +55,28 @@ body {
 
 #search-container {
   overflow-x: visible;
+}
+
+.image-container {
+    width: 100%;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.ratio-16-9 {
+  padding-bottom: 56.25%; // 9/16*100
+}
+
+.ratio-1-1 {
+  padding-bottom: 100%
 }
 
 .search-icon {
