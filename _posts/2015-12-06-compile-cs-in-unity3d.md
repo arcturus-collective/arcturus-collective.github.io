@@ -38,7 +38,7 @@ runtime and how to actually make it work. While this guide is by no means
 comprehensive, by the end you should have enough information to find your way
 around.
 
-## The Code
+## <a name="code"/> The Code
 
 First, make sure that your Unity3D project is set to use the .Net 2.0 Api
 Compatibility Level. Otherwise, some namespaces that we need will be missing and
@@ -137,7 +137,7 @@ delegate helps reduce the overhead from reflection and makes it nicer to call in
 the source code. If the function took an argument, we would use
 `Func<T, TResult>` instead of `Action<T>`.
 
-## How To Make it Work
+## <a name="work"/> How To Make it Work
 
 The thing is, the example I provided won’t always work. In MacOSX you may get a
 `FileNotFound` exception for a file called `mcs`. If you don’t have that
