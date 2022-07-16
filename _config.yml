@@ -42,6 +42,7 @@ collections:
   posts:
     permalink: /archive/:year/:month/:day/:slug:output_ext
 
+date_format: "%FT%TZ"
 postlimit: 10
 timezone: UTC
 

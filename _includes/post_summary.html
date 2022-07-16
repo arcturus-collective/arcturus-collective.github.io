@@ -5,13 +5,13 @@
       <img src="{{ post.image-header }}" alt="{{ post.image-alt }}" class="post-image-header">
     </div>
   {%- endif -%}
-  <h2><a class="post-link" href="{{ post.url | relative_url }}">
+  <h1><a class="post-link" href="{{ post.url | relative_url }}">
     {{ post.title | escape }}
-  </a></h2>
+  </a></h1>
   {%- if post.author -%}
-    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: date_format }}</p>
+    <p class="post-meta">Posted by {{ post.author }} at {{ post.date | date: date_format }}</p>
   {%- else -%}
-    <p class="post-meta">Posted on {{ post.date | date: date_format }}</p>
+    <p class="post-meta">Posted at {{ post.date | date: date_format }}</p>
   {%- endif -%}
 </div>
 <div class="post-contents">

@@ -1,7 +1,7 @@
 @import '_globals';
 @import '_reset';
 
-@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Lato&family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css');
 
@@ -13,17 +13,20 @@ a {
 }
 
 h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
 }
 
 h2 {
-  font-family: 'Iceland', cursive;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
 }
 
 body {
   background-color: $bgcolor;
   color: $fgcolor;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
   display: grid;
   justify-content: center;
   column-gap: 20px;

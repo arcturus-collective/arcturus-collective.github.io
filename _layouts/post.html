@@ -3,7 +3,6 @@ layout: default
 ---
 
 <article class="post">
-  {%- assign date_format = site.date_format | default: "%FT%TZ" -%}
   <header class="post-header">
     {%- if page.image-header and page.image-alt -%}
       <div class="image-container ratio-16-9" style="margin-bottom: 1em">
@@ -12,7 +11,7 @@ layout: default
     {%- endif -%}
     <h1>{{ page.title | escape }}</h1>
     {%- if page.author -%}
-      <p class="post-meta">Posted by {{ page.author }} at {{ page.date | date: date_format }}</p>
+      <p class="post-meta">Posted by {{ page.author }} at {{ page.date | date: site.date_format }}</p>
     {%- elsif page.date -%}
       <p class="post-meta">Posted at {{ page.date | date: date_format }}</p>
     {%- endif -%}
