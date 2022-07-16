@@ -9,7 +9,7 @@ permalink: /people/
 * **Pronouns:** she/her
 * **Likes:** Board Games
 * **Dislikes:** Sweets
-* **Website:** exodrifter.space
+* **Website:** [exodrifter.space](https://exodrifter.space)
 * **Expertise:** Code architecture
 * **Why Co-ops:** I want everyone to benefit from our shared enterprise.
 
