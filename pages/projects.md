@@ -6,7 +6,7 @@ permalink: /projects/
 
 ## Tessera Mesh Composer
 
-Tessera Mesh Composer is a state of the art tool for technical artists to create recipes for procedural meshes. Existing procedural generation tools on the market are often too expensive for independent developers and typically require exporting static meshes. Tessera offers similar features at a more affordable price. Additionally, Teserra recipes, which provide instructions on how an asset should be built, can be imported directly into popular game engines and tools like Unity, Unreal, Blender, and Godot to procedurally generate assets on the fly. This powerful capability can reduce the size of your binaries and provide a breathtakingly infinite array of in-game assets. Try out our free early access demo and help us make a better product!
+Tessera Mesh Composer is a state of the art tool for technical artists to create recipes for procedural meshes. Existing procedural generation tools on the market are often too expensive for independent developers and typically require exporting static meshes. Tessera offers similar features at a more affordable price. Additionally, Teserra recipes, which provide instructions on how an asset should be built, can be imported directly into popular game engines and tools like Unity, Unreal, Blender, and Godot to procedurally generate assets on the fly. This powerful capability can reduce the size of your binaries and provide a breathtakingly infinite array of in-game assets.
 
 ## Rumor
 
